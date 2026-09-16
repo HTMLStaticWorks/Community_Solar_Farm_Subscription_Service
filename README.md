@@ -1,0 +1,2 @@
+# Community_Solar_Farm_Subscription_Service
+Automated website repository for Community_Solar_Farm_Subscription_Service
