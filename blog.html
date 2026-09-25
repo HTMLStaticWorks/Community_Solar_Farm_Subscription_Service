@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar News & Community Insights - Sunova</title>
+    <meta name="description"
+        content="Read the latest community solar news, green energy guides, utility bill credit explainers, and clean power insights.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link id="bootstrapCss" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl sticky-top">
+        <div class="container-fluid px-3 px-md-4 px-xl-5">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.svg" alt="Sunova" width="36" height="36">
+            <span class="fw-bold fs-4"><span class="text-primary">Sunova</span></span>
+        </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.svg" alt="Sunova" width="32" height="32">
+                        <h5 class="offcanvas-title fw-bold mb-0" id="offcanvasNavbarLabel"><span class="text-primary">Sunova</span></h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Farms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Support</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Portal</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <button class="rtl-toggle" id="rtlToggle" title="Toggle RTL/LTR">
+                            <span class="rtl-text">RTL</span>
+                        </button>
+                        <button class="theme-toggle" id="themeToggle" title="Switch Theme">
+                            <i class="bi bi-moon-fill"></i>
+                            <span class="d-xl-none ms-2">Toggle Theme</span>
+                        </button>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container text-center">
+            <span class="badge bg-primary text-white mb-2 px-3 py-1 rounded-pill">Clean Energy Journal</span>
+            <h1 class="display-5 fw-bold text-white">Solar News & Subscriber Insights</h1>
+            <p class="lead text-white-50 mb-0">Learn how shared solar farms are transforming electric bills and the energy grid.</p>
+        </div>
+    </div>
+
+    <!-- Featured Post Section -->
+    <section class="py-5 bg-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <img src="assets/images/project1.png"
+                        class="img-fluid rounded-4 shadow-lg w-100" alt="Featured Community Solar Story">
+                </div>
+                <div class="col-lg-5 ps-lg-5">
+                    <span class="badge bg-primary mb-2 px-3 py-1">Featured Guide</span>
+                    <h2 class="display-6 fw-bold mb-3">How Community Solar Enables 100% Green Power For Renters & Condos</h2>
+                    <p class="text-muted mb-4">Over 70% of households lack suitable roofs for solar panels. Discover how community solar subscriptions allow anyone with an electric bill to benefit from local solar power with zero installation.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://placehold.co/50x50/f59e0b/fff?text=AG" class="rounded-circle me-3" alt="Dr. Alan Grant">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Dr. Alan Grant</h6>
+                            <small class="text-muted">Clean Energy Analyst • 4 min read</small>
+                        </div>
+                    </div>
+                    <a href="#featured" class="btn btn-outline-primary">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <img src="assets/images/project2.png"
+                                    class="card-img-top" alt="Solar Net Crediting">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary mb-2">Billing Guide</span>
+                                    <h5 class="card-title fw-bold">Understanding Your Solar Bill Credits Line-By-Line</h5>
+                                    <p class="card-text text-muted small">A step-by-step breakdown of how utility net credits appear on ConEd, National Grid, and Eversource statements.</p>
+                                    <a href="#" class="text-primary text-decoration-none fw-bold">Read Guide <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <img src="assets/images/hero.png" class="card-img-top"
+                                    alt="Grid Decarbonization">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-secondary mb-2">Grid & Policy</span>
+                                    <h5 class="card-title fw-bold">How Shared Solar Farms Decommission Peaker Plants</h5>
+                                    <p class="card-text text-muted small">Replacing dirty fossil peaker stations with distributed community solar arrays during peak summer demand.</p>
+                                    <a href="#" class="text-primary text-decoration-none fw-bold">Read Guide <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                <img src="assets/images/project3.png" class="card-img-top"
+                                    alt="State Incentives">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-warning text-dark mb-2">Incentives</span>
+                                    <h5 class="card-title fw-bold">State Community Solar Programs: 2026 Expansion</h5>
+                                    <p class="card-text text-muted small">New state mandates and expanded LMI incentives guarantee even larger electric bill savings this year.</p>
+                                    <a href="#" class="text-primary text-decoration-none fw-bold">Read Guide <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card mb-4 border-0 shadow-sm p-4 rounded-4">
+                        <h5 class="fw-bold mb-3">Search Solar Articles</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search topics, utilities...">
+                            <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 border-0 shadow-sm p-4 rounded-4">
+                        <h5 class="fw-bold mb-3">Categories</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                How Community Solar Works
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Utility Net-Crediting
+                                <span class="badge bg-primary rounded-pill">9</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                State Clean Energy Policies
+                                <span class="badge bg-primary rounded-pill">7</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Subscriber Success Stories
+                                <span class="badge bg-primary rounded-pill">15</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Highlight Section -->
+    <section class="py-5 bg-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                        <img src="assets/images/consultation.png" class="img-fluid w-100"
+                            alt="Community Solar Explainer Video">
+                        <a href="#"
+                            class="position-absolute top-50 start-50 translate-middle btn btn-light rounded-circle p-3 shadow">
+                            <i class="bi bi-play-fill fs-1 text-primary"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 ps-lg-5">
+                    <span class="text-primary fw-bold text-uppercase">Video Explainer</span>
+                    <h3 class="fw-bold mb-3">Demystifying Net Crediting: How Community Solar Pays You</h3>
+                    <p class="text-muted mb-4">Watch our 3-minute video breakdown illustrating how kilowatt hours generated at the solar farm translate to dollar savings on your electric bill.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary"><i class="bi bi-play-circle-fill me-2"></i>Watch Explainer</a>
+                        <a href="pricing.html" class="btn btn-outline-secondary">Calculate Savings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-5 position-relative text-white overflow-hidden"
+        style="background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));">
+        <div class="container text-center position-relative">
+            <i class="bi bi-envelope-paper-heart fs-1 mb-3 d-inline-block"></i>
+            <h2 class="fw-bold mb-3">Get Clean Energy & Savings Alerts</h2>
+            <p class="lead mb-4 col-lg-7 mx-auto text-white-50">Join 12,000+ subscribers receiving updates when new community solar farm capacity opens in your utility territory.</p>
+            <form class="row justify-content-center g-2">
+                <div class="col-md-5">
+                    <input type="email" class="form-control form-control-lg border-0 shadow-sm"
+                        placeholder="Enter your email address">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-dark btn-lg shadow-sm">Get Notified</button>
+                </div>
+            </form>
+            <small class="d-block mt-3 opacity-75">No spam. Unsubscribe anytime.</small>
+        </div>
+    </section>
+
+    <!-- Trending Tags Cloud -->
+    <section class="py-5 bg-tertiary">
+        <div class="container">
+            <h5 class="mb-4 text-center fw-bold">Popular Topics</h5>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#CommunitySolar</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#UtilityCredits</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#ZeroUpfront</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#SolarForRenters</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#CleanEnergy</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#SaveOnElectric</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#Renewables</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">#NetCrediting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none mb-3">
+                        <img src="assets/images/logo.svg" alt="Sunova" width="38" height="38">
+                        <h4 class="mb-0 fw-bold"><span class="text-primary">Sunova</span></h4>
+                    </a>
+                    <p class="text-white-50">Democratizing clean energy through neighborhood solar farm subscriptions. Clean energy, guaranteed utility bill credits, and zero rooftop panels.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Our Farms</a></li>
+                        <li><a href="services.html">How It Works</a></li>
+                        <li><a href="pricing.html">Savings Calculator</a></li>
+                        <li><a href="blog.html">Solar Insights</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Subscribers</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="dashboard.html">Subscriber Dashboard</a></li>
+                        <li><a href="login.html">Subscriber Login</a></li>
+                        <li><a href="register.html">Sign Up For A Share</a></li>
+                        <li><a href="contact.html">Support & Eligibility</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Solar Newsletter</h5>
+                    <p class="text-white-50">Get alerts when new community solar farms open in your utility area.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="button"><i class="bi bi-send-fill"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0 text-white-50">&copy; 2026 Sunova. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="backToTop" class="btn btn-primary rounded-circle"><i class="bi bi-arrow-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

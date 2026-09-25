@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Sunova</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link id="bootstrapCss" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+    class="d-flex align-items-center justify-content-center min-vh-100 bg-secondary text-white text-center position-relative overflow-hidden"
+    style="background: linear-gradient(rgba(11, 25, 44, 0.94), rgba(11, 25, 44, 0.94)), url('https://placehold.co/1920x1080/f59e0b/white?text=Community+Solar+Farm') no-repeat center center / cover;">
+    <!-- Quick Top Controls (Theme & RTL) -->
+    <div class="position-fixed top-0 end-0 p-3 d-flex gap-2" style="z-index: 1050;">
+        <button class="rtl-toggle" id="rtlToggle" title="Toggle RTL/LTR">
+            <span class="rtl-text">RTL</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" title="Switch Theme">
+            <i class="bi bi-moon-fill"></i>
+        </button>
+    </div>
+
+
+    <div class="container position-relative z-index-2">
+        <div class="mb-4">
+            <img src="assets/images/logo.svg" alt="Sunova" width="70" height="70" class="mb-3">
+            <h1 class="display-3 fw-bold">New Sunova Farms Launching</h1>
+            <p class="lead text-white-50">We are expanding our regional community solar farm arrays to new utility territories.</p>
+        </div>
+
+        <div id="countdown" class="d-flex justify-content-center gap-4 my-5 flex-wrap">
+            <div class="text-center">
+                <div class="display-4 fw-bold" id="days">00</div>
+                <div class="small text-uppercase text-white-50">Days</div>
+            </div>
+            <div class="text-center">
+                <div class="display-4 fw-bold" id="hours">00</div>
+                <div class="small text-uppercase text-white-50">Hours</div>
+            </div>
+            <div class="text-center">
+                <div class="display-4 fw-bold" id="minutes">00</div>
+                <div class="small text-uppercase text-white-50">Minutes</div>
+            </div>
+            <div class="text-center">
+                <div class="display-4 fw-bold" id="seconds">00</div>
+                <div class="small text-uppercase text-white-50">Seconds</div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p class="mb-3 text-white-50">Get notified when enrollment opens in your zip code:</p>
+                <form class="d-flex gap-2">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="index.html" class="text-white-50 text-decoration-none hover-white"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const countDownDate = new Date().getTime() + (5 * 24 * 60 * 60 * 1000);
+
+        const x = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "OPEN FOR ENROLLMENT";
+            }
+        }, 1000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

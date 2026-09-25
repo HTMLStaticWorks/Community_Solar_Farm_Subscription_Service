@@ -1,0 +1,16 @@
+{
+  "name": "community-solar-farm-subscription-service",
+  "version": "1.0.0",
+  "main": "add_rtl_buttons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "puppeteer": "^25.12.0"
+  }
+}

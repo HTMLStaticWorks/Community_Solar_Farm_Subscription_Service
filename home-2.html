@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Local Solar Farms - Sunova</title>
+    <meta name="description" content="Explore active community solar farms in your utility region. Subscribe to a share and start receiving monthly bill credits.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <!-- Bootstrap 5 CSS -->
+    <link id="bootstrapCss" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hero-v2::before {
+            background: linear-gradient(135deg, rgba(11, 25, 44, 0.88) 0%, rgba(245, 158, 11, 0.35) 100%) !important;
+        }
+
+        .project-item {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-item img {
+            transition: filter 0.3s ease;
+        }
+
+        .project-item:hover img {
+            filter: brightness(1.05);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl sticky-top">
+        <div class="container-fluid px-3 px-md-4 px-xl-5">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.svg" alt="Sunova" width="36" height="36">
+            <span class="fw-bold fs-4"><span class="text-primary">Sunova</span></span>
+        </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.svg" alt="Sunova" width="32" height="32">
+                        <h5 class="offcanvas-title fw-bold mb-0" id="offcanvasNavbarLabel"><span class="text-primary">Sunova</span></h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="home-2.html">Farms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Support</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Portal</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <button class="rtl-toggle" id="rtlToggle" title="Toggle RTL/LTR">
+                            <span class="rtl-text">RTL</span>
+                        </button>
+                        <button class="theme-toggle" id="themeToggle" title="Switch Theme">
+                            <i class="bi bi-moon-fill"></i>
+                            <span class="d-xl-none ms-2">Toggle Theme</span>
+                        </button>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section V2 -->
+    <section class="hero-section hero-v2 d-flex align-items-center"
+        style="background: linear-gradient(rgba(11, 37, 58, 0.8), rgba(11, 37, 58, 0.8)), url('assets/images/hero2-bg.png') center/cover no-repeat;">
+        <div class="container hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <span class="badge bg-primary text-white mb-3 px-3 py-2 rounded-pill"><i class="bi bi-geo-alt-fill me-1"></i> Open Local Solar Subscriptions</span>
+                    <h1 class="display-3 fw-bold mb-4">Connect To Local Solar Farms & Cut Your Electric Bill</h1>
+                    <p class="lead mb-5 text-white-50">Choose an active regional solar farm, allocate your monthly kilowatt share, and enjoy 10–15% bill savings automatically credited to your utility statement.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="register.html" class="btn btn-primary btn-lg">Check Farm Availability</a>
+                        <a href="pricing.html" class="btn btn-outline-light btn-lg">Savings Calculator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-0 rounded-4 overflow-hidden shadow-lg border">
+                <div class="col-lg-6">
+                    <div class="card bg-tertiary h-100 border-0 rounded-0 p-4 p-md-5 text-start">
+                        <span class="badge bg-primary text-white mb-3 align-self-start px-3 py-2 rounded-pill">For Residents & Renters</span>
+                        <h3 class="fw-bold mb-3">Residential Farm Share</h3>
+                        <p class="mb-4 text-muted">Zero maintenance, zero panel installations, and instant monthly savings on your existing electric meter.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i> <span>Guaranteed 10%–15% solar bill credits</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i> <span>Available to apartments, condos & renters</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i> <span>$0 sign up and no cancellation fees</span></li>
+                        </ul>
+                        <a href="register.html" class="btn btn-primary py-2 px-4 mt-auto fw-bold align-self-start">Subscribe As Resident</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-solar-navy text-white h-100 border-0 rounded-0 p-4 p-md-5 text-start">
+                        <span class="badge bg-warning text-dark mb-3 align-self-start px-3 py-2 rounded-pill fw-bold">For Organizations & SMEs</span>
+                        <h3 class="fw-bold mb-3 text-white">Commercial Farm Share</h3>
+                        <p class="mb-4 text-white text-opacity-75">High-volume energy allocations for small businesses, schools, and non-profits seeking predictable overhead savings.</p>
+                        <ul class="list-unstyled mb-4 text-white">
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-warning me-2 fs-5"></i> <span class="text-white fw-semibold">Multi-meter aggregation support</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-warning me-2 fs-5"></i> <span class="text-white fw-semibold">ESG & Scope 2 clean energy reporting</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-warning me-2 fs-5"></i> <span class="text-white fw-semibold">Custom capacity reservations</span></li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-warning py-2 px-4 mt-auto fw-bold align-self-start">Explore Commercial Shares</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Monitoring App Section -->
+    <section class="py-5 bg-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 text-center">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                        class="img-fluid rounded-4 shadow-lg d-block mx-auto" alt="Subscriber Portal App">
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                    <span class="text-primary fw-bold text-uppercase">Subscriber Technology</span>
+                    <h2 class="display-5 fw-bold mb-4">Track Energy Credits & Bill Savings 24/7</h2>
+                    <p class="lead text-muted mb-4">Our online subscriber dashboard lets you monitor solar farm production, view energy allocations, and download utility credit statements in real-time.</p>
+                    <div class="d-flex mb-4 gap-4 justify-content-center justify-content-lg-start">
+                        <div>
+                            <i class="bi bi-lightning-charge-fill fs-1 text-primary"></i>
+                            <h5 class="mt-2">Live Production</h5>
+                            <p class="small text-muted">See real-time generation metrics from your assigned solar farm.</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-cash-stack fs-1 text-primary"></i>
+                            <h5 class="mt-2">Credit Statements</h5>
+                            <p class="small text-muted">Verify monthly dollar savings credited to your utility bill.</p>
+                        </div>
+                    </div>
+                    <div class="text-lg-start">
+                        <a href="dashboard.html" class="btn btn-primary btn-lg">View Subscriber Portal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farm Project Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <span>Active Solar Farms</span>
+                <h2>Explore Active Community Arrays</h2>
+                <p class="text-muted">Clean solar farms powering local neighborhoods across the regional utility grid.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-item mb-4 card p-3 border-0 shadow-sm rounded-4">
+                        <img src="assets/images/project2.png" class="img-fluid rounded-3 shadow-sm w-100"
+                            alt="Sunny Meadow Solar Farm">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h5 class="mb-0 fw-bold">Sunny Meadow Farm</h5>
+                            <span class="badge bg-success">94% Subscribed</span>
+                        </div>
+                        <p class="small text-muted mb-2">Capacity: 2.8 MW • 650 Households</p>
+                        <p class="small text-secondary mb-0"><i class="bi bi-geo-alt-fill text-primary"></i> Sector 4 Central Utility Zone</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item mb-4 card p-3 border-0 shadow-sm rounded-4">
+                        <img src="assets/images/project1.png" class="img-fluid rounded-3 shadow-sm w-100"
+                            alt="Highland Valley Clean Array">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h5 class="mb-0 fw-bold">Highland Valley Array</h5>
+                            <span class="badge bg-primary">Now Enrolling</span>
+                        </div>
+                        <p class="small text-muted mb-2">Capacity: 4.5 MW • 1,100 Households</p>
+                        <p class="small text-secondary mb-0"><i class="bi bi-geo-alt-fill text-primary"></i> North Grid Distribution District</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item mb-4 card p-3 border-0 shadow-sm rounded-4">
+                        <img src="assets/images/project3.png" class="img-fluid rounded-3 shadow-sm w-100"
+                            alt="Oakridge Clean Energy Garden">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h5 class="mb-0 fw-bold">Oakridge Solar Garden</h5>
+                            <span class="badge bg-primary">Now Enrolling</span>
+                        </div>
+                        <p class="small text-muted mb-2">Capacity: 1.8 MW • 420 Households</p>
+                        <p class="small text-secondary mb-0"><i class="bi bi-geo-alt-fill text-primary"></i> Valley Electric Service Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Utility Partners Section -->
+    <section class="py-5 bg-tertiary">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h4>Integrated With Major Regional Utilities</h4>
+                <p class="text-muted">Solar credits are recognized and credited by leading power distribution companies.</p>
+            </div>
+            <div class="row align-items-center justify-content-center text-center g-4">
+                <div class="col-6 col-md-3">
+                    <div class="bg-white p-3 rounded-3 shadow-sm fw-bold text-secondary">
+                        <i class="bi bi-grid-3x3-gap-fill text-primary fs-4 d-block mb-1"></i> National Grid
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white p-3 rounded-3 shadow-sm fw-bold text-secondary">
+                        <i class="bi bi-lightning-charge-fill text-primary fs-4 d-block mb-1"></i> ConEdison
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white p-3 rounded-3 shadow-sm fw-bold text-secondary">
+                        <i class="bi bi-sun-fill text-primary fs-4 d-block mb-1"></i> Eversource
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white p-3 rounded-3 shadow-sm fw-bold text-secondary">
+                        <i class="bi bi-shield-check text-primary fs-4 d-block mb-1"></i> PSEG Energy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Impact -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/images/nature-bg.png" class="img-fluid rounded-4 shadow" alt="Community Solar Environmental Impact">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <span class="text-primary fw-bold text-uppercase">Community Impact</span>
+                    <h2 class="display-5 fw-bold mb-4">Cleaner Neighborhoods, Lower Utility Bills</h2>
+                    <p class="lead mb-4">Every community solar farm subscriber helps decommission fossil-fuel peaker plants while enjoying guaranteed savings on their power bills.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-3 bg-tertiary p-3 rounded-3">
+                                <i class="bi bi-tree-fill text-success fs-2"></i>
+                                <div>
+                                    <h5 class="mb-0 fw-bold">85,000+</h5>
+                                    <p class="small text-muted mb-0">Equivalent Trees Planted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-3 bg-tertiary p-3 rounded-3">
+                                <i class="bi bi-cloud-slash-fill text-info fs-2"></i>
+                                <div>
+                                    <h5 class="mb-0 fw-bold">18,500 Tons</h5>
+                                    <p class="small text-muted mb-0">CO2 Emissions Avoided</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Call to Action -->
+    <section class="py-0 mb-5 mb-lg-0">
+        <div class="container-fluid">
+            <div class="row g-0">
+                <div class="col-lg-6 bg-primary text-white p-5 d-flex flex-column justify-content-center">
+                    <div class="p-lg-5">
+                        <h2 class="display-4 fw-bold mb-3">Join Your Local Solar Farm Today</h2>
+                        <p class="lead mb-4">Enrollment takes less than 2 minutes. Enter your details to match with available farm shares in your zip code.</p>
+                        <form class="bg-white p-4 rounded-4 text-dark shadow">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-semibold">Zip Code</label>
+                                    <input type="text" class="form-control" placeholder="10001">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-semibold">Electric Utility Provider</label>
+                                    <select class="form-select">
+                                        <option>Select Your Electric Utility...</option>
+                                        <option>National Grid</option>
+                                        <option>ConEdison</option>
+                                        <option>Eversource</option>
+                                        <option>PSEG</option>
+                                        <option>Other / Regional Utility</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <a href="register.html" class="btn btn-secondary w-100 fw-bold py-2">Check Available Farm Shares</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/consultation.png" class="img-fluid split-image-responsive d-block"
+                        alt="Join Sunova">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto mt-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none mb-3">
+                        <img src="assets/images/logo.svg" alt="Sunova" width="38" height="38">
+                        <h4 class="mb-0 fw-bold"><span class="text-primary">Sunova</span></h4>
+                    </a>
+                    <p class="text-white-50">Democratizing clean energy through neighborhood solar farm subscriptions. Clean energy, guaranteed utility bill credits, and zero rooftop panels.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Our Farms</a></li>
+                        <li><a href="services.html">How It Works</a></li>
+                        <li><a href="pricing.html">Savings Calculator</a></li>
+                        <li><a href="blog.html">Solar Insights</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Subscribers</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="dashboard.html">Subscriber Dashboard</a></li>
+                        <li><a href="login.html">Subscriber Login</a></li>
+                        <li><a href="register.html">Sign Up For A Share</a></li>
+                        <li><a href="contact.html">Support & Eligibility</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Solar Newsletter</h5>
+                    <p class="text-white-50">Get alerts when new community solar farms open in your utility area.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="button"><i class="bi bi-send-fill"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0 text-white-50">&copy; 2026 Sunova. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
