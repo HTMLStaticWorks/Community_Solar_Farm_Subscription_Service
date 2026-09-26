@@ -26,6 +26,19 @@
         .contact-info-card:hover {
             transform: translateY(-5px);
         }
+
+        .support-feature-card {
+            background-color: var(--card-bg-light);
+            color: var(--text-dark);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        [data-bs-theme="dark"] .support-feature-card {
+            background-color: #12243d;
+            color: #f8fafc;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 
@@ -54,7 +67,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Farms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Calculator</a></li>
@@ -148,12 +161,12 @@
                     <div class="card border-0 shadow-sm p-4 rounded-4 h-100 bg-tertiary d-flex flex-column justify-content-center">
                         <h4 class="fw-bold mb-3"><i class="bi bi-building-check text-primary me-2"></i> Clean Energy Farm Operations Center</h4>
                         <p class="text-muted mb-4">Our operations control room monitors 12+ community solar farms across regional transmission zones 24 hours a day, ensuring accurate credit generation telemetry to partner utilities.</p>
-                        <div class="p-3 bg-white rounded-3 shadow-sm mb-3">
-                            <h6 class="fw-bold text-dark mb-1"><i class="bi bi-patch-check-fill text-success me-2"></i> Guaranteed Utility Linking</h6>
+                        <div class="p-3 rounded-3 shadow-sm mb-3 support-feature-card">
+                            <h6 class="fw-bold mb-1"><i class="bi bi-patch-check-fill text-success me-2"></i> Guaranteed Utility Linking</h6>
                             <p class="small text-muted mb-0">Our team handles all backend interconnection paperwork with your electric utility so you never need to contact them directly.</p>
                         </div>
-                        <div class="p-3 bg-white rounded-3 shadow-sm">
-                            <h6 class="fw-bold text-dark mb-1"><i class="bi bi-arrow-repeat text-primary me-2"></i> Free Plan Adjustments</h6>
+                        <div class="p-3 rounded-3 shadow-sm support-feature-card">
+                            <h6 class="fw-bold mb-1"><i class="bi bi-arrow-repeat text-primary me-2"></i> Free Plan Adjustments</h6>
                             <p class="small text-muted mb-0">If your electricity consumption changes (e.g. buying an EV or moving), we adjust your farm share instantly at $0 cost.</p>
                         </div>
                     </div>

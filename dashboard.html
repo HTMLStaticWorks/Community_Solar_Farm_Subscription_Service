@@ -42,6 +42,19 @@
                 display: block;
             }
         }
+
+        .portal-target-box {
+            background-color: var(--tertiary-color);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            color: var(--text-dark);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        [data-bs-theme="dark"] .portal-target-box {
+            background-color: #12243d;
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #f8fafc;
+        }
     </style>
 </head>
 
@@ -157,57 +170,57 @@
             <div class="main-content container-fluid">
                 <!-- Analytics Cards -->
                 <div class="row g-3 mb-4">
-                    <div class="col-md-3">
-                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-primary">
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-primary h-100">
+                            <div class="d-flex justify-content-between align-items-center h-100">
                                 <div>
                                     <h6 class="text-muted text-uppercase small mb-1">Monthly Credit Allocation</h6>
                                     <h3 class="fw-bold mb-0">785 kWh</h3>
                                     <small class="text-success"><i class="bi bi-arrow-up"></i> 100% of Home Use</small>
                                 </div>
-                                <div class="bg-primary-subtle p-3 rounded-circle text-primary">
+                                <div class="bg-primary-subtle p-3 rounded-circle text-primary flex-shrink-0 ms-2">
                                     <i class="bi bi-lightning-charge-fill fs-4"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-success">
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-success h-100">
+                            <div class="d-flex justify-content-between align-items-center h-100">
                                 <div>
                                     <h6 class="text-muted text-uppercase small mb-1">Total Bill Savings</h6>
                                     <h3 class="fw-bold mb-0 text-success">$428.50</h3>
                                     <small class="text-muted">Lifetime Net Savings</small>
                                 </div>
-                                <div class="bg-success-subtle p-3 rounded-circle text-success">
+                                <div class="bg-success-subtle p-3 rounded-circle text-success flex-shrink-0 ms-2">
                                     <i class="bi bi-cash-stack fs-4"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-warning">
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-warning h-100">
+                            <div class="d-flex justify-content-between align-items-center h-100">
                                 <div>
                                     <h6 class="text-muted text-uppercase small mb-1">Subscription Plan</h6>
-                                    <h4 class="fw-bold mb-0 text-dark">100% Offset</h4>
+                                    <h3 class="fw-bold mb-0">100% Offset</h3>
                                     <small class="text-primary">$0 Upfront • 15% Discount</small>
                                 </div>
-                                <div class="bg-warning-subtle p-3 rounded-circle text-warning">
+                                <div class="bg-warning-subtle p-3 rounded-circle text-warning flex-shrink-0 ms-2">
                                     <i class="bi bi-shield-check fs-4"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card p-3 border-0 shadow-sm border-start border-4 border-info h-100">
+                            <div class="d-flex justify-content-between align-items-center h-100">
                                 <div>
                                     <h6 class="text-muted text-uppercase small mb-1">Live Farm Output</h6>
                                     <h3 class="fw-bold mb-0">2.84 MW</h3>
                                     <small class="text-info"><i class="bi bi-sun"></i> 99.4% Peak Output</small>
                                 </div>
-                                <div class="bg-info-subtle p-3 rounded-circle text-info">
+                                <div class="bg-info-subtle p-3 rounded-circle text-info flex-shrink-0 ms-2">
                                     <i class="bi bi-cpu fs-4"></i>
                                 </div>
                             </div>
@@ -241,17 +254,17 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="bg-tertiary p-3 rounded-3">
-                                        <h4 class="fw-bold text-secondary mb-0">National Grid</h4>
+                                        <h4 class="fw-bold mb-0">National Grid</h4>
                                         <small class="text-muted">Linked Utility Account</small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-3 bg-light rounded-3 border">
-                                <div class="d-flex justify-content-between small text-muted mb-1">
-                                    <span>Monthly Clean Energy Target (785 kWh)</span>
+                            <div class="p-3 rounded-3 portal-target-box">
+                                <div class="d-flex justify-content-between small mb-2">
+                                    <span class="fw-semibold">Monthly Clean Energy Target (785 kWh)</span>
                                     <strong class="text-primary">100% Fulfilled</strong>
                                 </div>
-                                <div class="progress" style="height: 10px;">
+                                <div class="progress" style="height: 10px; background-color: rgba(128, 128, 128, 0.2);">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"></div>
                                 </div>
                             </div>
@@ -282,8 +295,8 @@
 
                 <!-- Recent Credit Allocations Table -->
                 <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0 fw-bold text-dark">Recent Energy Credit Allocations & Statements</h5>
+                    <div class="card-header bg-transparent border-bottom py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 fw-bold">Recent Energy Credit Allocations & Statements</h5>
                         <a href="orders.html" class="btn btn-sm btn-outline-primary">View All Statements</a>
                     </div>
                     <div class="card-body">
@@ -336,8 +349,8 @@
 
                 <!-- Farm Messages Preview -->
                 <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0 fw-bold text-dark">Solar Farm Notifications & Updates</h5>
+                    <div class="card-header bg-transparent border-bottom py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 fw-bold">Solar Farm Notifications & Updates</h5>
                         <a href="messages.html" class="btn btn-sm btn-outline-secondary">All Notifications</a>
                     </div>
                     <div class="card-body">

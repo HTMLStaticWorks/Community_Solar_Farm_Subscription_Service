@@ -23,6 +23,23 @@
             background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(11, 25, 44, 0.04) 100%);
             border: 2px solid var(--primary-color);
         }
+
+        [data-bs-theme="dark"] .calc-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(14, 32, 56, 0.95) 100%);
+        }
+
+        .calc-card {
+            background-color: var(--card-bg-light);
+            color: var(--text-dark);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        [data-bs-theme="dark"] .calc-card {
+            background-color: #12243d;
+            color: #f8fafc;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
     </style>
 </head>
 
@@ -51,7 +68,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Farms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link active" href="pricing.html">Calculator</a></li>
@@ -96,14 +113,14 @@
                         </div>
                         <div class="row align-items-center g-4">
                             <div class="col-lg-6">
-                                <label class="form-label fw-bold text-dark">Average Monthly Electric Bill: <span id="billDisplay" class="text-primary fs-4 fw-bold ms-2">$150 / mo</span></label>
+                                <label class="form-label fw-bold">Average Monthly Electric Bill: <span id="billDisplay" class="text-primary fs-4 fw-bold ms-2">$150 / mo</span></label>
                                 <input type="range" class="form-range" min="50" max="600" step="10" value="150" id="billRange" oninput="updateSavings(this.value)">
                                 <div class="d-flex justify-content-between text-muted small mt-1">
                                     <span>$50/mo</span>
                                     <span>$300/mo</span>
                                     <span>$600/mo</span>
                                 </div>
-                                <div class="mt-4 p-3 bg-white rounded-3 border shadow-sm">
+                                <div class="mt-4 p-3 rounded-3 shadow-sm calc-card">
                                     <div class="d-flex justify-content-between mb-2">
                                         <span class="text-muted">Subscription Cost:</span>
                                         <strong class="text-success">$0 Upfront (Free)</strong>
@@ -119,13 +136,13 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="bg-white p-4 rounded-4 shadow-sm border text-center">
+                                <div class="p-4 rounded-4 shadow-sm text-center calc-card">
                                     <h5 class="text-muted mb-1">Estimated Annual Savings</h5>
                                     <h2 class="display-4 fw-bold text-primary mb-2" id="annualSavings">$225</h2>
                                     <p class="text-success fw-semibold small mb-4"><i class="bi bi-arrow-up-circle-fill"></i> Direct credit on your utility bill</p>
-                                    <div class="row text-center border-top pt-3 g-2">
-                                        <div class="col-6 border-end">
-                                            <h5 class="fw-bold text-dark mb-0" id="fiveYearSavings">$1,125</h5>
+                                    <div class="row text-center border-top pt-3 g-2" style="border-color: rgba(128, 128, 128, 0.2) !important;">
+                                        <div class="col-6 border-end" style="border-color: rgba(128, 128, 128, 0.2) !important;">
+                                            <h5 class="fw-bold mb-0" id="fiveYearSavings">$1,125</h5>
                                             <small class="text-muted">5-Year Savings</small>
                                         </div>
                                         <div class="col-6">
